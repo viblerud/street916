@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>916번길 굿즈샵</title>
+    <link rel="stylesheet" type="text/css" href="./common.css">
+    <link rel="stylesheet" type="text/css" href="./page5.css">
+
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="clear"></div>
+    <div id="wrap_page5">
+    <header>
+        <nav>
+            <div id="main-menu">
+                <div id="main_btn">
+                    <a href="./index.html"><img src="./img/logo_small.png" height="30px"></a>
+                </div>
+                <div class="clear"></div>
+                <ul>
+                    <li><a href="./page1.html">사진전 소개</a></li>
+                    <li><a href="./page2.html">작가 소개</a></li>
+                    <li><a href="./page3.html">갤러리</a></li>
+                    <li><a href="./page4.html">굿즈샵</a></li>
+                    <li id="selected"><a href="./page5.html">다운로드</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="clear"></div>
+    <main>
+        <section id="sec_page5">
+            <div id="download">
+                <div class="img_bg">
+                    <img src="./img/logo_big.png">
+                </div>
+                <div class="download_info">
+                    <div class="middle_icon">
+                        <img src="./img/logo_s.png" width="50px">
+                    </div>
+                    <div class="title_img">
+                        <img src="./img/download.png">
+                    </div>
+                    <div class="title_text">
+                        <p>916번지의 사진들을 개인소장 하세요!</p>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/001.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/001.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/002.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/002.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/003.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/003.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/004.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/004.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/005.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/005.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/006.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/006.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/007.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/007.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/008.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/008.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+                <div class="download_list">
+                    <div class="download_img">
+                        <img src="./img/download/001.jpg" width="400px">
+                    </div>
+                    <div class="btn_download">
+                        <button class="download_btn" data-img="./img/download/009.jpg">
+                            DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="clear"></div>
+    <footer>
+        <div class="footer_list">
+            <ul>
+                <li>STREET 916 : 916번길</li>
+                <li>copyright ⓒ JANG SEONG KYUNG all right reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+<script>
+    document.querySelectorAll('.download_btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const imgPath = this.getAttribute('data-img');
+            const link = document.createElement('a');
+            link.href = imgPath;
+            link.download = imgPath.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    });
+</script>
+</body>
+</html>

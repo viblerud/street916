@@ -1,0 +1,207 @@
+#wrap_page3 {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 945px;
+}
+#sec_page3 {
+    margin: 0 auto;
+    width: 90%;
+    height: 1050px;
+    background-color: rgb(39, 39, 39);
+    background-image: url(./img/logo_big.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.main_title_bg {
+    position: absolute;
+    background-image: url(./img/logo_big.png);
+    width: 922px;
+    height: 393px;
+    z-index: -1;
+}
+#main_phone {
+    padding: 110px 0 80px 0;
+}
+.phone {
+    margin: 0 auto;
+    border: solid 2px rgb(65, 65, 65);
+    background-color: black;
+    width: 450px;
+    height: 800px;
+    border-radius: 40px;
+    box-shadow: 0px 8px 40px;
+    background-image: url(./img/);
+    padding: 11px 11px;
+}
+.phone_inner {
+    background-image: url(./img/bg/phone_bg.jpg);
+    width: 410px;
+    height: 770px;
+    border-radius: 30px;
+    padding: 15px 20px;
+}
+
+.gallery_modal {
+    display: none;
+    position: absolute;
+    top: 189px;
+    width: 410px;
+    height: 770px;
+    border-radius: 30px;
+    padding: 15px 20px;
+    background-color: brown;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#btn_esc {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    float: right;
+}
+.gallery_modal.close {
+    display: none;
+}
+
+.clock {
+    display: flex;
+    font-weight: bold;
+}
+.icon_gallery {
+    padding: 30px 10px;
+    width: 70px;
+    display: inline-block;
+}
+#gallery, #camera {
+    border: none;
+    background-color: transparent;
+}
+.icon_gallery p {
+    padding-top: 5px;
+    text-align: center;
+}
+
+#phone_gallery {
+    display: none; /*작업시onoff*/
+    position: absolute;
+    top: 189px;
+    border-radius: 30px;
+    width: 450px;
+    height: 800px;
+    overflow-y: auto;
+
+}
+#phone_gallery::-webkit-scrollbar {
+    display: none;
+}
+#phone_gallery.open {
+    display: block;
+}
+#back {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    float: left;
+    border: none;
+    font-family: 'pretendard';
+    width: auto;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.gallery_list {
+    display: flex;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: beige;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.gallery_list:nth-of-type(1) {
+    background-image: url(./img/bg/001.png);
+}
+.gallery_list:nth-of-type(2) {
+    background-image: url(./img/bg/002.jpg);
+}
+.gallery_list:nth-of-type(3) {
+    background-image: url(./img/bg/003.jpg);
+}
+.gallery_list:nth-of-type(4) {
+    background-image: url(./img/bg/004.jpg);
+}
+.gallery_list:nth-of-type(5) {
+    background-image: url(./img/bg/005.jpg);
+}
+.gallery_list:nth-of-type(6) {
+    background-image: url(./img/bg/006.jpg);
+}
+.gallery_list:nth-of-type(7) {
+    background-image: url(./img/bg/007.jpg);
+}
+.gallery_list:nth-of-type(8) {
+    background-image: url(./img/bg/008.jpg);
+}
+.gallery_list:nth-of-type(9) {
+    background-image: url(./img/bg/009.jpg);
+}
+.gallery_list:nth-of-type(10) {
+    background-image: url(./img/bg/010.jpg);
+}
+.gallery_list:nth-of-type(11) {
+    background-image: url(./img/bg/011.jpg);
+}
+.gallery_list:nth-of-type(12) {
+    background-image: url(./img/bg/012.jpg);
+}
+.gallery_list:nth-of-type(13) {
+    background-image: url(./img/bg/013.jpg);
+}
+.gallery_list:nth-of-type(14) {
+    background-image: url(./img/bg/014.jpg);
+}
+.gallery_list:nth-of-type(15) {
+    background-image: url(./img/bg/015.jpg);
+}
+.gallery_list:nth-of-type(16) {
+    background-image: url(./img/bg/016.jpg);
+}
+.gallery_list:nth-of-type(17) {
+    background-image: url(./img/bg/017.jpg);
+}
+.gallery_list:nth-of-type(18) {
+    background-image: url(./img/bg/018.jpg);
+}
+.gallery_list:nth-of-type(19) {
+    background-image: url(./img/bg/019.jpg);
+}
+.gallery_list:nth-of-type(20) {
+    background-image: url(./img/bg/020.jpg);
+}
+.gallery_list:nth-of-type(21) {
+    background-image: url(./img/bg/021.jpg);
+}
+.gallery_list:nth-of-type(22) {
+    background-image: url(./img/bg/022.jpg);
+}
+.gallery_list:nth-of-type(23) {
+    background-image: url(./img/bg/023.jpg);
+}
+.gallery_list:nth-of-type(24) {
+    background-image: url(./img/bg/024.jpg);
+}
+
+
+
+
+
+
+

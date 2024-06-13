@@ -1,0 +1,49 @@
+#wrap_page4 {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 945px;
+}
+#sec_page4 {
+    margin: 0 auto;
+    width: 90%;
+    height: 2600px;
+    background-color: rgb(39, 39, 39);
+}
+.middle_icon {
+    padding-bottom: 50px;
+}
+.img_bg {
+    text-align: center;
+    padding: 100px;
+    opacity: .03;
+    z-index: -1;
+}
+.title_text {
+    color: white;
+    font-size: 1.2em;
+    padding-top: 20px;
+    line-height: 2em;
+}
+#goods {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+.goods_info {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+.goods_list {
+    width: 400px;
+    display: inline-block;
+    padding: 25px 25px;
+}
+.goods_title h3, p {
+    color: white;
+    padding: 8px 0;
+}

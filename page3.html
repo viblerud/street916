@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>916번길 :포토갤러리</title>
+    <link rel="stylesheet" type="text/css" href="./common.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./page3.css">
+
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="clear"></div>
+    <div id="wrap_page3"> <!-- class="fade"-->
+    <header>
+        <nav>
+            <div id="main-menu">
+                <div id="main_btn">
+                    <a href="./index.html"><img src="./img/logo_small.png" height="30px"></a>
+                </div>
+                <div class="clear"></div>
+                <ul>
+                    <li><a href="./page1.html">사진전 소개</a></li>
+                    <li><a href="./page2.html">작가 소개</a></li>
+                    <li id="selected"><a href="./page3.html">갤러리</a></li>
+                    <li><a href="./page4.html">굿즈샵</a></li>
+                    <li><a href="./page5.html">다운로드</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="clear"></div>
+    <main>
+        <section id="sec_page3">
+            <div class="main_title_bg"></div>
+            <section id="main_phone">
+                <div class="phone">
+                    <div class="phone_inner">
+                        <div class="clock">
+                            <div class="hour">00</div>
+                            :
+                            <div class="min">00</div>
+                        </div>
+                        <div class="icon_gallery">
+                            <button id="gallery" style="cursor: pointer">
+                                <img src="./img/btn/gallery_btn.png" width="70px">
+                            </button>
+                            <p>갤러리</p>
+                        </div>
+                        <div class="icon_gallery">
+                            <button id="camera" style="cursor: pointer">
+                                <img src="./img/btn/camera_btn.png" width="70px">
+                            </button>
+                            <p>카메라</p>
+                        </div>
+                    </div>
+                    <div id="phone_gallery">
+                        <div id="btn_back">
+                            <button id="back" style="cursor: pointer">
+                                <img src="./img/btn/back.png" alt="">
+                            </button>
+                        </div>
+                        <div id="gallery">
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+    
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+    
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+    
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+    
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+    
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div> 
+
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>
+                            <div class="gallery_list"></div>    
+                        </div>
+                    </div>
+                    <div class="gallery_modal">
+                        <button id="btn_esc"  style="cursor: pointer">
+                            <img src="./img/btn/esc.png" alt="닫기" width="20px">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        </main>
+        <div class="clear"></div>
+        <footer>
+            <div class="footer_list">
+                <ul>
+                    <li>STREET 916 : 916번길</li>
+                    <li>copyright ⓒ JANG SEONG KYUNG all right reserved.</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+<script>
+    let galleryBtn = document.querySelector('#gallery');
+    let phoneGallery = document.querySelector('#phone_gallery');
+    let phoneBackBtn = document.querySelector('#back');
+    let gallery = document.querySelectorAll('.gallery_list');
+    let escBtn = document.querySelector('#btn_esc');
+    
+    let hour = document.querySelector('.hour');
+    let min = document.querySelector('.min');
+
+    galleryBtn.addEventListener('click', () => {
+        phoneGallery.classList.add('open');
+    })
+
+    phoneBackBtn.addEventListener('click', () => {
+        phoneGallery.classList.remove('open');
+    })
+    escBtn.addEventListener('click', () => {
+        galleryModal.style.display = 'none';
+    })
+
+    function getClock (){
+        let today = new Date();
+        const hours = today.getHours();
+        const minutes = today.getMinutes();
+
+        hour.innerHTML = hours;
+        min.innerHTML = minutes;
+    }
+    
+    getClock(); 
+    setInterval(getClock, 1000); 
+
+
+    // --------------------------------------------------
+
+    let galleryList = document.querySelectorAll('.gallery_list');
+    let galleryModal = document.querySelector('.gallery_modal');
+
+    galleryList.forEach(list => {
+        list.addEventListener('click', () => {
+            console.log(window.getComputedStyle(list));
+            const computedStyle  = window.getComputedStyle(list);
+            const bgUrl = computedStyle.backgroundImage;
+            galleryModal.style.backgroundImage = bgUrl;
+            galleryModal.style.display = 'block';
+            // modalImg.url = url;
+
+        })
+    })
+
+</script>
+</body>
+</html>
